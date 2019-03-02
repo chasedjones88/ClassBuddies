@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/slate_grey"
+    android:id="@+id/page1"
+    android:layout_centerInParent="true">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/appBarLayout2">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/top_options_panel"
+            android:background="@drawable/grey_black_border_bottom">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/threebar_options"
+                    android:src="@drawable/menu_icon"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_toEndOf="@+id/threebar_options"
+                    android:contentDescription="classBuddiesLogo"
+                    android:paddingEnd="45dp"
+
+                    android:src="@drawable/classbuddies" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:id="@+id/txtEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:text="Event:"
+            android:textAlignment="textEnd"
+            android:textColor="@color/light_gray"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextName"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtEvent"
+            android:layout_alignBottom="@+id/txtEvent"
+            android:layout_marginStart="26dp"
+            android:layout_toEndOf="@+id/txtEvent"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="100"
+            android:singleLine="true"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/txtClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtEvent"
+            android:layout_below="@+id/editTextName"
+            android:layout_marginTop="14dp"
+            android:text="Class:"
+            android:textAlignment="textEnd"
+            android:textColor="@color/light_gray"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextClass"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtClass"
+            android:layout_alignBottom="@+id/txtClass"
+            android:layout_alignStart="@+id/editTextName"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="30"
+            android:singleLine="true"
+            android:textColor="@color/light_gray"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtClass"
+            android:layout_below="@+id/editTextClass"
+            android:layout_marginTop="22dp"
+            android:text="Date:"
+            android:textColor="@color/light_gray"
+            android:textSize="24sp" />
+
+        <Spinner
+            android:id="@+id/spinMonth"
+            android:layout_width="95dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtDate"
+            android:layout_alignBottom="@+id/txtDate"
+            android:layout_alignStart="@+id/editTextClass"
+            android:background="@color/slate_grey"
+            android:textColor="@color/light_gray"
+            android:popupBackground="@color/slate_grey"
+            android:entries="@array/month_array" />
+
+        <Spinner
+            android:id="@+id/spinDay"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/spinMonth"
+            android:layout_alignBottom="@+id/spinMonth"
+            android:layout_marginStart="6dp"
+            android:layout_toEndOf="@+id/spinMonth"
+            android:background="@color/slate_grey"
+            android:textColor="@color/light_gray"
+            android:popupBackground="@color/slate_grey"
+            android:entries="@array/day_array" />
+
+        <Spinner
+            android:id="@+id/spinYear"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/spinDay"
+            android:layout_alignBottom="@+id/spinDay"
+            android:layout_marginStart="7dp"
+            android:layout_toEndOf="@+id/spinDay"
+            android:background="@color/slate_grey"
+            android:textColor="@color/light_gray"
+            android:popupBackground="@color/slate_grey"
+            android:entries="@array/year_array" />
+
+        <TextView
+            android:id="@+id/txtTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtDate"
+            android:layout_below="@+id/txtDate"
+            android:layout_marginTop="31dp"
+            android:text="Time:"
+            android:textAlignment="textEnd"
+            android:textColor="@color/light_gray"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextStartHr"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtTime"
+            android:layout_alignBottom="@+id/txtTime"
+            android:layout_toStartOf="@+id/spinDay"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            android:text="12"
+            android:textAlignment="center"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/txtSemi1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/txtTime"
+            android:layout_alignBottom="@+id/txtTime"
+            android:layout_alignStart="@+id/spinDay"
+            android:layout_marginStart="6dp"
+            android:text=":"
+            android:textColor="@color/light_gray"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextStartMin"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editTextStartHr"
+            android:layout_alignBottom="@+id/editTextStartHr"
+            android:layout_alignEnd="@+id/txtMeetUpDesc"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            android:text="30"
+            android:textAlignment="center"
+            android:textColor="@color/light_gray" />
+
+        <Spinner
+            android:id="@+id/spinStart12Hr"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtStart"
+            android:layout_alignStart="@+id/spinYear"
+            android:background="@color/slate_grey"
+            android:entries="@array/hr12_array"
+            android:popupBackground="@color/slate_grey"
+            android:textColor="@color/light_gray" />
+
+        <EditText
+            android:id="@+id/editTextEndHr"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextStartHr"
+            android:layout_below="@+id/editTextStartHr"
+            android:layout_marginTop="6dp"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            android:text="2"
+            android:textAlignment="center"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/txtSemi2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editTextEndMin"
+            android:layout_alignBottom="@+id/editTextEndMin"
+            android:layout_alignStart="@+id/txtSemi1"
+            android:text=":"
+            android:textColor="@color/light_gray"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextEndMin"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editTextEndHr"
+            android:layout_alignBottom="@+id/editTextEndHr"
+            android:layout_alignStart="@+id/editTextStartMin"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="2"
+            android:singleLine="true"
+            android:text="45"
+            android:textAlignment="center"
+            android:textColor="@color/light_gray" />
+
+        <Spinner
+            android:id="@+id/spinEnd12Hr"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/txtSemi2"
+            android:layout_alignStart="@+id/spinStart12Hr"
+            android:textColor="@color/light_gray"
+            android:background="@color/slate_grey"
+            android:popupBackground="@color/slate_grey"
+            android:entries="@array/hr12_array" />
+
+        <TextView
+            android:id="@+id/txtStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editTextStartHr"
+            android:layout_alignBottom="@+id/editTextStartHr"
+            android:layout_toEndOf="@+id/buttonCancel"
+            android:text="Start"
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtStart"
+            android:layout_alignTop="@+id/spinEnd12Hr"
+            android:text="End"
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/txtDescLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtTime"
+            android:layout_below="@+id/editTextEndHr"
+            android:layout_marginTop="31dp"
+            android:text="Describe your location:"
+            android:textColor="@color/light_gray"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextLocationDesc"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtDescLocation"
+            android:layout_below="@+id/txtDescLocation"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="50"
+            android:singleLine="true"
+            android:textColor="@color/light_gray" />
+
+        <TextView
+            android:id="@+id/txtMeetUpDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextLocationDesc"
+            android:layout_below="@+id/editTextLocationDesc"
+            android:layout_marginTop="20dp"
+            android:text="Describe Your Meet Up:"
+            android:textColor="@color/light_gray"
+            android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextDescription"
+            android:layout_width="360dp"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/txtMeetUpDesc"
+            android:layout_below="@+id/txtMeetUpDesc"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:maxLength="160"
+            android:singleLine="true"
+            android:textColor="@color/light_gray" />
+
+        <Button
+            android:id="@+id/buttonPickLocation"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/spinEnd12Hr"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="17dp"
+            android:text="Pick Location On Map" />
+
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/editTextDescription"
+            android:layout_alignTop="@+id/buttonPickLocation"
+            android:text="Cancel" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

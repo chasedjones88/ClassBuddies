@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_profile"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@color/slate_grey">
+
+    <!--Toolbar-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/top_options_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_black_border_bottom">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:contentDescription="@string/create_profile"
+                    android:id="@+id/menu_bar_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/menu_icon" />
+
+                <ImageView
+                    android:contentDescription="@string/create_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_toEndOf="@+id/menu_bar_icon"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="45dp"
+                    android:src="@drawable/classbuddies"
+
+                    />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile">
+
+        <!--Profile Header-->
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/profile_box"
+            android:layout_width="250dp"
+            android:layout_height="110dp"
+            android:background="@drawable/profile_box"
+            android:layout_marginTop="100dp"
+            android:layout_centerHorizontal="true">
+
+            <!--Name-->
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:text="@string/user_full_name"
+                android:textAlignment="center"
+                android:textColor="@color/dark_grey"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--Major-->
+            <EditText
+                android:id="@+id/major"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="43dp"
+                android:inputType="text"
+                android:singleLine="true"
+                android:text="@string/major"
+                android:textAlignment="center"
+                android:textColor="@color/dark_grey"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/add_delete_classes"
+        android:layout_below="@+id/profile"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter class you wish to add or delete:"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="165dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="20dp"
+            android:id="@+id/class_text">
+
+            <EditText
+                android:id="@+id/textClass"
+                android:layout_width="164dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="Class"
+                android:inputType="textShortMessage"
+                android:singleLine="true"
+                android:textColor="@color/white" />
+        </android.support.design.widget.TextInputLayout>
+        <Button
+            android:id="@+id/buttonAddClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Class"
+           android:layout_below="@+id/class_text"
+            android:layout_toRightOf="@+id/buttonDeleteClass"
+            android:textAlignment="center" />
+        <Button
+            android:id="@+id/buttonDeleteClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Class"
+            android:layout_below="@+id/class_text"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+
+    <!-- Class List -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/classes"
+        android:layout_below="@+id/add_delete_classes">
+        <!--Classes Header-->
+        <TextView
+            android:id="@+id/classes_header"
+            android:layout_width="250dp"
+            android:layout_height="30dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="12dp"
+            android:text="Current Classes"
+            android:textColor="@color/grey"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+        <!--Line-->
+        <View
+            android:layout_width="340dp"
+            android:layout_height="1dp"
+            android:layout_marginStart="22dp"
+            android:layout_marginTop="40dp"
+            android:background="@color/grey"
+            android:id="@+id/view" />
+        <ListView
+            android:id="@+id/list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="7dp"
+            android:layout_below="@+id/view"
+            android:layout_above="@+id/save"
+            android:scrollbars="vertical" />
+        <Button
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="15dp"
+            android:text="@string/save"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            tools:ignore="ButtonStyle,InefficientWeight,RtlHardcoded"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/save" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

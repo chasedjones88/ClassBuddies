@@ -1,0 +1,10 @@
+image: uber/android-build-environment:latest
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - gradle
+        script:
+          - echo "Running build.sh for gradlew"
+          - ./build.sh

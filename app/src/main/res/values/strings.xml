@@ -1,0 +1,132 @@
+<resources>
+
+    <string-array name="semester_choices">
+        <item>Fall 2017</item>
+        <item>Spring 2018</item>
+        <item>Fall 2018</item>
+    </string-array>
+
+    <string-array name="department_choices">
+        <item>Mathematics</item>
+        <item>Computer Science</item>
+        <item>English</item>
+    </string-array>
+
+
+    <string name="semester_prompt">Choose a semester</string>
+    <string name="department_prompt">Choose a department</string>
+    <string name="class_prompt">Choose a class</string>
+
+    <string name="add_button">Add</string>
+    <string name="app_name">ClassBuddies</string>
+    <string name="action_settings">Settings</string>
+    <string name="back">Back</string>
+    <string name="create_profile">Create Profile</string>
+    <string name="class_buddies">ClassBuddies</string>
+    <string name="email_notif">Email must be verified before you can log in</string>
+    <string name="error">An error occurred. Please try again</string>
+    <string name="first_name">First Name</string>
+    <string name="invalid">Invalid username or password</string>
+    <string name="last_name">Last Name</string>
+    <string name="main">MainActivity</string>
+    <string name="next">Next</string>
+    <string name="password">Password</string>
+    <string name="submit">Submit</string>
+    <string name="username">Username</string>
+    <string name="what_s_your_name">What\'s your name?</string>
+    <string name="title_activity_map">Map</string>
+    <string name="aaron_cheung">Aaron Cheung</string>
+    <string name="charmaine_ching">Charmaine Ching</string>
+    <string name="chase_jones">Chase Jones</string>
+    <string name="dennis_hon">Dennis Hon</string>
+    <string name="jeffrey_porovich">Jeffrey Porovich</string>
+    <string name="nicole_barakat">Nicole Barakat</string>
+    <string name="robert_roati">Robert Roati</string>
+    <string name="authors">Authors</string>
+    <string name="links">Links</string>
+    <string name="classbuddies_net">classbuddies.net</string>
+    <string name="invalidDate">The selected date is invalid.</string>
+    <string name="invalidHour">The hour provided is invalid [1–12].</string>
+    <string name="invalidMin">The minutes provided are invalid [0–59].</string>
+    <string name="errEventName">This event must be named.</string>
+    <string name="errEventClass">This event needs a class associated with it [ex: CSC131].</string>
+    <string name="errEventLocation">Please provide specifics on your location [ex: 5th floor].</string>
+    <string name="errEventDesc">Please add an event description.</string>
+    <string name="backToTheFuture">We can\'t go back in time (yet). This group has already ended.</string>
+    <string name="MapOOB">The position you selected is too far from campus. Please choose a closer location.</string>
+    <string name="selfchat">You don\'t need an app to talk to yourself.</string>
+    <string name="results">Results: </string>
+
+    <!--Added by Jeff-->
+    <string name="user_full_name">Name</string>
+    <string name="major">Major</string>
+    <string name="add_buddy_icon">Add Buddy Icon</string>
+    <string name="remove_buddy_icon">Remove Buddy Icon</string>
+    <string name="add_buddy">Add Buddy</string>
+    <string name="remove_buddy">Remove Buddy</string>
+    <string name="message_icon">Message Icon</string>
+    <string name="message">Message</string>
+    <string name="classes">Classes</string>
+    <string name="class_01">Class 01</string>
+    <string name="class_02">Class 02</string>
+    <string name="class_03">Class 03</string>
+    <string name="class_04">Class 04</string>
+    <string name="class_05">Class 05</string>
+    <string name="save">Save</string>
+    <string name="edit">Edit</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="joinGroup">Join Group</string>
+    <string name="leaveGroup">Leave Group</string>
+    <string name="addBuddy">Add Buddy</string>
+    <string name="removeBuddy">Remove Buddy</string>
+
+    <string name="user_too_short">Username must be greater than 3 characters.</string>
+    <string name="pass_too_short">Password must contain 6 or more characters.</string>
+    <string name="invalid_email">Not a valid email address.</string>
+    <string name="user_exists">That username is already in use.</string>
+    <string name="email_exists">That email is already in use.</string>
+    <string name="email_verified">Email Address Verified</string>
+
+    <string-array name="month_array">
+        <item>Jan</item>
+        <item>Feb</item>
+        <item>Mar</item>
+        <item>Apr</item>
+        <item>May</item>
+        <item>Jun</item>
+        <item>Jul</item>
+        <item>Aug</item>
+        <item>Sep</item>
+        <item>Oct</item>
+        <item>Nov</item>
+        <item>Dec</item>
+    </string-array>
+
+    <string-array name="day_array">
+        <item>1</item><item>2</item><item>3</item><item>4</item><item>5</item><item>6</item><item>7</item><item>8</item><item>9</item><item>10</item>
+        <item>11</item><item>12</item><item>13</item><item>14</item><item>15</item><item>16</item><item>17</item><item>18</item><item>19</item><item>20</item>
+        <item>21</item><item>22</item><item>23</item><item>24</item><item>25</item><item>26</item><item>27</item><item>28</item><item>29</item><item>30</item>
+        <item>31</item>
+    </string-array>
+
+    <string-array name="hr12_array">
+        <item>AM</item>
+        <item>PM</item>
+    </string-array>
+
+    <string-array name="year_array">
+        <item>2017</item>
+        <item>2018</item>
+    </string-array>
+
+    <string-array name="names_array">
+        <item>@string/aaron_cheung</item>
+        <item>@string/charmaine_ching</item>
+        <item>@string/chase_jones</item>
+        <item>@string/dennis_hon</item>
+        <item>@string/jeffrey_porovich</item>
+        <item>@string/nicole_barakat</item>
+        <item>@string/robert_roati</item>
+    </string-array>
+
+</resources>

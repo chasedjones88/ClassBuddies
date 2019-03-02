@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+Edited By Aaron 11/19/17
+-->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:background="@color/slate_grey"
+    android:id="@+id/page1"
+    android:layout_centerInParent="true">
+
+    <!-- Toolbar -->
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:id="@+id/appBarLayout2">
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/top_options_panel"
+            android:background="@drawable/grey_black_border_bottom">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="15dp"
+                    android:layout_centerVertical="true"
+                    android:id="@+id/threebar_options"
+                    android:src="@drawable/menu_icon"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_toEndOf="@+id/threebar_options"
+                    android:contentDescription="classBuddiesLogo"
+                    android:paddingEnd="45dp"
+
+                    android:src="@drawable/classbuddies" />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+    </android.support.design.widget.AppBarLayout>
+
+    //Text box title
+
+    <RelativeLayout
+        android:layout_width="370dp"
+        android:layout_height="650dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="20dp"
+        android:id="@+id/relativeLayout">
+
+        <TextView
+            android:id="@+id/editText3"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textEventName"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Class: "
+            android:textColor="@color/white"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/textEventName"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/editText"
+            android:layout_alignBottom="@+id/editText"
+            android:layout_toEndOf="@+id/editText"
+            android:ems="10"
+            android:text=""
+            android:textColor="@color/grey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/editText"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="81dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Event: "
+            android:textColor="@color/white"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/textEventClass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_alignBaseline="@+id/editText3"
+            android:layout_alignBottom="@+id/editText3"
+            android:layout_toEndOf="@+id/editText3"
+            android:ems="10"
+            android:text=""
+            android:textColor="@color/grey"
+            android:textSize="24sp" />
+
+        <TextView
+            android:id="@+id/editText2"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textEventClass"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Time/Date: "
+            android:textColor="@color/white"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/textEventTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/buttonEventJoin"
+            android:layout_below="@+id/editText2"
+            android:ems="15"
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+
+
+        <Button
+            android:id="@+id/buttonEventJoin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Join Group"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="12dp" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textEventTime"
+            android:layout_marginTop="8dp"
+            android:text="Location: "
+            android:textColor="@color/white"
+            android:textSize="22dp" />
+
+        <TextView
+            android:id="@+id/textEventLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:ems="10"
+            android:text=""
+            android:textColor="@color/grey"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textEventLocation"
+            android:layout_marginTop="8dp"
+            android:text="Additional info:"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/textEventDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView2"
+            android:ems="14"
+            android:scrollIndicators="right"
+            android:scrollbarAlwaysDrawVerticalTrack="true"
+            android:scrollbars="vertical"
+            android:text=""
+            android:textColor="@color/grey"
+            android:textSize="18sp"
+            android:verticalScrollbarPosition="right" />
+
+        <Button
+            android:id="@+id/buttonDeleteGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delete Group"
+            android:visibility="invisible"
+            android:layout_alignBottom="@+id/buttonEventJoin"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textEventDesc"
+            android:layout_marginTop="14dp"
+            android:text="Group Members:"
+            android:textSize="18dp" />
+
+        <ListView
+            android:id="@+id/members_list"
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView7" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

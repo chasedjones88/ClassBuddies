@@ -1,0 +1,9 @@
+<resources>
+        <item name="white" type="color">#ffffffff</item>
+        <item name="grey" type="color">#a0a0a0</item>
+        <item name="activity_bg" type="color">#555555</item>
+        <item name="light_gray" type="color">#d3d3d3</item>
+        <item name="dark_grey" type="color">#565656</item>
+        <color name="black">#000000</color>
+        <color name="slate_grey">#464646</color>
+</resources>

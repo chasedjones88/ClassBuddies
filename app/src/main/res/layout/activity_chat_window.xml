@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/edit_profile"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:background="@color/slate_grey">
+
+    <!--Toolbar-->
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/top_options_panel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grey_black_border_bottom">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:contentDescription="@string/create_profile"
+                    android:id="@+id/menu_bar_icon"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="15dp"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/menu_icon" />
+
+                <ImageView
+                    android:contentDescription="@string/create_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="100dp"
+                    android:layout_toEndOf="@+id/menu_bar_icon"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="45dp"
+                    android:src="@drawable/classbuddies"
+
+                    />
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="80dp">
+
+        <TextView
+            android:id="@+id/textViewChatLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="8dp"
+            android:textAlignment="textStart"
+            android:textAllCaps="false"
+            android:textColor="@color/light_gray"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/buttonLeaveChat"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:text="Leave Chat"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/profile"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="120dp">
+
+        <!--Profile Header-->
+        <RelativeLayout
+            android:id="@+id/relativeLayoutWebView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
+
+            <WebView
+                android:id="@+id/webViewChatWindow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <EditText
+            android:id="@+id/editTextMessage"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_alignBaseline="@+id/buttonSend"
+
+            android:layout_alignBottom="@+id/buttonSend"
+            android:layout_marginEnd="6dp"
+            android:layout_toStartOf="@+id/buttonSend"
+            android:background="@color/dark_grey"
+            android:ems="10"
+            android:hint="Message"
+            android:inputType="textPersonName"
+            android:paddingLeft="5dp"
+            android:singleLine="true"
+            android:textColor="@color/grey" />
+
+        <Button
+            android:id="@+id/buttonSend"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="10dp"
+            android:text="Send" />
+    </RelativeLayout>
+
+    <!-- Class List -->
+
+
+</RelativeLayout>
